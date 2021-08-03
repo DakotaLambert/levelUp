@@ -1,0 +1,38 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "name": "Dungeons & Dragons",
+            "game_type": 2,
+            "description": "A fantasy tabletop role-playing game (RPG). D&D departs from traditional war-gaming by allowing each player to create their own character to play instead of a military formation.",
+            "number_of_players": 4,
+            "gamer": 1,
+            "maker": "Wizards Of The Coast"
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "name": "Sorry",
+            "game_type": 1,
+            "description": "Bump other players' pawns and hide in your Safety Zone, where pawns of other colors can't enter.",
+            "number_of_players": 4,
+            "gamer": 1,
+            "maker": "Hasbro"
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 3,
+        "fields": {
+            "name": "RuneScape",
+            "game_type": 3,
+            "description": "A fantasy massively multiplayer online role-playing game (MMORPG). RuneScape takes place in the world of Gielinor, a medieval fantasy realm divided into different kingdoms, regions, and cities.",
+            "number_of_players": 1,
+            "gamer": 1,
+            "maker": "Jagex"
+        }
+    }
+]

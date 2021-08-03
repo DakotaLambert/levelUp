@@ -1,0 +1,28 @@
+[
+    {
+        "model": "levelupapi.event",
+        "pk": 1,
+        "fields": {
+            "host": 1,
+            "game": 1,
+            "date": "2021-10-08",
+            "time": "5:00 PM",
+            "description": "Playing D&D! Max of four players per table, not including the Game Master.",
+            "title": "Dungeon Crawlers",
+            "attendees": [1]
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 2,
+        "fields": {
+            "host": 1,
+            "game": 2,
+            "date": "2021-10-08",
+            "time": "3:00 PM",
+            "description": "Playing Sorry! Max of four players per table, get ready BATCH.",
+            "title": "Sorry, not sorry.",
+            "attendees": [1]
+        }
+    }
+]
