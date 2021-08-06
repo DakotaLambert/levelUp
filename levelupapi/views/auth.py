@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User #pylint:disable=imported-auth-user
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
@@ -21,6 +21,7 @@ def login_user(request):
 
     # Use the built-in authenticate method to verify
     # authenticate returns the user object or None if no user is found
+    #? Black box?
     authenticated_user = authenticate(username=username, password=password)
 
     # If authentication was successful, respond with their token
