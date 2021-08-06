@@ -29,9 +29,9 @@ class EventView(ViewSet):
         event.description = request.data["description"]
         event.host = gamer
         event.title = request.data["title"]
-        event.attendees = request.data["attendees"]
+        # event.attendees = request.data["attendees"]
 
-        game = Game.objects.get(pk=request.data["gameId"])
+        game = Game.objects.get(pk=request.data["game"])
         event.game = game
 
         try:
