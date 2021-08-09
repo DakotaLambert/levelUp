@@ -31,7 +31,7 @@ class EventView(ViewSet):
         event.title = request.data["title"]
         # event.attendees = request.data["attendees"]
 
-        game = Game.objects.get(pk=request.data["game"])
+        game = Game.objects.get(pk=request.data["game"]) #? ORM in simpler terms
         event.game = game
 
         try:
@@ -60,7 +60,7 @@ class EventView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        host = Gamer.objects.get(user=request.auth.user)
+        host = Gamer.objects.get(user=request.auth.user) #? Gets single user
 
         event = Event.objects.get(pk=pk)
         event.description = request.data["description"]
