@@ -21,7 +21,6 @@ def login_user(request):
 
     # Use the built-in authenticate method to verify
     # authenticate returns the user object or None if no user is found
-    #? Black box?
     authenticated_user = authenticate(username=username, password=password)
 
     # If authentication was successful, respond with their token
