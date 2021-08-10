@@ -95,13 +95,13 @@ class GameView(ViewSet):
         # Do mostly the same thing as POST, but instead of
         # creating a new instance of Game, get the game record
         # from the database whose primary key is `pk`
-        game = Game.objects.get(pk=pk)
+        game = Game.objects.get(pk=pk) # Via query params, PK becomes whatever ID is passed through the param
         game.name = request.data["name"]
         game.maker = request.data["maker"]
         game.number_of_players = request.data["numberOfPlayers"]
         game.description = request.data["description"]
         game.gamer = gamer
-
+        #? If i wanted to add skill level back whats the process?
         game_type = GameType.objects.get(pk=request.data["gameTypeId"])
         game.game_type = game_type
         game.save()

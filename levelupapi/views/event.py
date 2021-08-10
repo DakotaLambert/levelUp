@@ -31,7 +31,7 @@ class EventView(ViewSet):
         event.title = request.data["title"]
         # event.attendees = request.data["attendees"]
 
-        game = Game.objects.get(pk=request.data["game"]) #? ORM in simpler terms
+        game = Game.objects.get(pk=request.data["game"])
         event.game = game
 
         try:
@@ -60,7 +60,7 @@ class EventView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        host = Gamer.objects.get(user=request.auth.user) #? Gets single user
+        host = Gamer.objects.get(user=request.auth.user)
 
         event = Event.objects.get(pk=pk)
         event.description = request.data["description"]
@@ -108,7 +108,7 @@ class EventView(ViewSet):
         # Filters events by game
         game = self.request.query_params.get('gameId', None)
         if game is not None:
-            events = events.filter(game__id = type) #? How to explain the ORM join
+            events = events.filter(game__id = game) #? How to explain the ORM join
 
         serializer = EventSerializer(
             events, many=True, context={'request': request}) #? what exactly is the context property data, many=true is what exactly
