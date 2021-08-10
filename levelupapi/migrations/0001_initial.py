@@ -6,13 +6,18 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
+    """[summary]
 
+    Args:
+        migrations ([type]): [description]
+    """
     initial = True
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
+    #? How EXACTLY are we creating these tables through migration, how to change, need confidence in the process, how to change without dropping table
     operations = [
         migrations.CreateModel(
             name='Event',

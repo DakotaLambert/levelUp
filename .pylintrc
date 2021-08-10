@@ -5,5 +5,5 @@ good-names=i,j,ex,pk
 disable=broad-except,
 
 [MASTER]
-disable=C0114, line-too-long
+disable=C0114, line-too-long, invalid-name
 
