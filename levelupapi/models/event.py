@@ -30,4 +30,3 @@ class Event(models.Model):
     @joined.setter
     def joined(self, value):
         self.__joined = value
-    

@@ -99,19 +99,21 @@ class EventView(ViewSet):
             Response -- JSON serialized list of events
         """
         events = Event.objects.all()
-        gamer = Gamer.objects.get(user=request.auth.user) #? what data is stored in user
+        # ? what data is stored in user
+        gamer = Gamer.objects.get(user=request.auth.user)
 
         # Setting joined property on every event
         for event in events:
-            event.joined = gamer in event.attendees.all() #? How to explain this
+            event.joined = gamer in event.attendees.all()  # ? How to explain this
 
         # Filters events by game
         game = self.request.query_params.get('gameId', None)
         if game is not None:
-            events = events.filter(game__id = game) #? How to explain the ORM join
+            # ? How to explain the ORM join
+            events = events.filter(game__id=game)
 
         serializer = EventSerializer(
-            events, many=True, context={'request': request}) #? what exactly is the context property data, many=true is what exactly
+            events, many=True, context={'request': request})  # ? what exactly is the context property data, many=true is what exactly
         return Response(serializer.data)
 
     @action(methods=['post', 'delete'], detail=True)

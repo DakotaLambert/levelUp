@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
     ]
 
     #? How EXACTLY are we creating these tables through migration, how to change, need confidence in the process, how to change without dropping table
+    
     operations = [
         migrations.CreateModel(
             name='Event',
